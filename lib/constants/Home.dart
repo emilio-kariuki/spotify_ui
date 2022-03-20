@@ -27,11 +27,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
     backgroundColor: kPurple,
-        // buttonBackgroundColor: Color.fromARGB(255, 17, 43, 18),
-        // animationDuration: Duration(milliseconds: 400),
-        // backgroundColor: Colors.transparent,
-        // index: index,
-        // height: 47,
+        
         // ignore: prefer_const_literals_to_create_immutables
         items: [
           BottomNavigationBarItem(
