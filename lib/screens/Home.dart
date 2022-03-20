@@ -14,7 +14,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       // extendBody: true,
       backgroundColor: Colors.blue,
-      body: Center(child:Text("Hello"))
+      body: SingleChildScrollView(child: Center(child:Text("Hello")))
     );
   }
 }
