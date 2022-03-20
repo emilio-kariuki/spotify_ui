@@ -3,6 +3,10 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import "package:flutter/material.dart";
 import 'package:spotify_ui/constants/constants.dart';
+import 'package:spotify_ui/screens/concerts.dart';
+import 'package:spotify_ui/screens/discover.dart';
+import 'package:spotify_ui/screens/library.dart';
+import 'package:spotify_ui/screens/search.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -24,6 +28,23 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body:Center(
+        child: PageView(
+          controller: controller,
+          onPageChanged: (newIndex) {
+            setState(() {
+              index = newIndex;
+            });
+          },
+          children: [
+            Concert(),
+            Discover(),
+            Search(),
+            // Notifications(),
+            Library()
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         
         type: BottomNavigationBarType.fixed,
