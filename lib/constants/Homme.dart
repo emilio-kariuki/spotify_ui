@@ -8,14 +8,14 @@ import 'package:spotify_ui/screens/discover.dart';
 import 'package:spotify_ui/screens/library.dart';
 import 'package:spotify_ui/screens/search.dart';
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class Homme extends StatefulWidget {
+  const Homme({Key? key}) : super(key: key);
 
   @override
-  State<Home> createState() => _HomeState();
+  State<Homme> createState() => _HommeState();
 }
 
-class _HomeState extends State<Home> {
+class _HommeState extends State<Homme> {
   PageController controller = PageController(initialPage: 0);
   int index = 0;
   final items = [
