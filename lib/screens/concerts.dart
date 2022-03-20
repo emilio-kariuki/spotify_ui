@@ -1,8 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 
 class Concert extends StatefulWidget {
-  Concert({Key? key}) : super(key: key);
+  const Concert({Key? key}) : super(key: key);
 
   @override
   State<Concert> createState() => _ConcertState();
