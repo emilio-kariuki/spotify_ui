@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import "package:flutter/material.dart";
 import 'package:spotify_ui/constants/constants.dart';
@@ -23,14 +25,27 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(
-        color: kPurple,
-        buttonBackgroundColor: Color.fromARGB(255, 17, 43, 18),
-        animationDuration: Duration(milliseconds: 400),
-        backgroundColor: Colors.transparent,
-        index: index,
-        height: 47,
-        items: items,
+      bottomNavigationBar: BottomNavigationBar(
+    backgroundColor: kPurple,
+        // buttonBackgroundColor: Color.fromARGB(255, 17, 43, 18),
+        // animationDuration: Duration(milliseconds: 400),
+        // backgroundColor: Colors.transparent,
+        // index: index,
+        // height: 47,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle),
+            label: 'Profile',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_bag),
+            label: 'Shop',
+          ),
+        ],
         onTap: (newIndex) {
           setState(() {
             controller.animateToPage(newIndex,
