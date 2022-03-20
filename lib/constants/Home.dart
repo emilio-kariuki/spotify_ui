@@ -32,6 +32,7 @@ class _HomeState extends State<Home> {
         // backgroundColor: Colors.transparent,
         // index: index,
         // height: 47,
+        // ignore: prefer_const_literals_to_create_immutables
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
