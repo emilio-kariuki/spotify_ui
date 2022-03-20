@@ -11,6 +11,8 @@ class Concert extends StatefulWidget {
 class _ConcertState extends State<Concert> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(child:Text("Hello"))
+    );
   }
 }
