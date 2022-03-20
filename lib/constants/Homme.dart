@@ -36,7 +36,7 @@ class _HommeState extends State<Homme> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: kPurple,
+        backgroundColor: Colors.transparent,
         currentIndex: index,
         // ignore: prefer_const_literals_to_create_immutables
         items: [
