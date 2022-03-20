@@ -25,9 +25,9 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        
         type: BottomNavigationBarType.fixed,
         backgroundColor: kPurple,
-
         // ignore: prefer_const_literals_to_create_immutables
         items: [
           BottomNavigationBarItem(
