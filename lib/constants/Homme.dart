@@ -3,6 +3,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import "package:flutter/material.dart";
 import 'package:spotify_ui/constants/constants.dart';
+import 'package:spotify_ui/screens/Home.dart';
 import 'package:spotify_ui/screens/concerts.dart';
 import 'package:spotify_ui/screens/discover.dart';
 import 'package:spotify_ui/screens/library.dart';
@@ -18,17 +19,11 @@ class Homme extends StatefulWidget {
 class _HommeState extends State<Homme> {
   PageController controller = PageController(initialPage: 0);
   int index = 0;
-  final items = [
-    Icon(Icons.map, size: 30, color: Colors.white),
-    Icon(Icons.layers, size: 30, color: Colors.white),
-    Icon(Icons.add, color: Colors.white),
-    // Icon(Icons.notifications, size: 30,color:Colors.white),
-    Icon(Icons.person, color: Colors.white),
-  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(
+      body: Center(
         child: PageView(
           controller: controller,
           onPageChanged: (newIndex) {
@@ -36,17 +31,10 @@ class _HommeState extends State<Homme> {
               index = newIndex;
             });
           },
-          children: [
-            Concert(),
-            Discover(),
-            Search(),
-            // Notifications(),
-            Library()
-          ],
+          children: [Concert(), Discover(), Search(), Home(), Library()],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        
         type: BottomNavigationBarType.fixed,
         backgroundColor: kPurple,
         // ignore: prefer_const_literals_to_create_immutables
