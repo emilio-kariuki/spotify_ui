@@ -4,7 +4,6 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import "package:flutter/material.dart";
 import 'package:spotify_ui/constants/constants.dart';
 
-
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -16,18 +15,19 @@ class _HomeState extends State<Home> {
   PageController controller = PageController(initialPage: 0);
   int index = 0;
   final items = [
-    Icon(Icons.map, size: 30,color:Colors.white),
-    Icon(Icons.layers, size: 30,color:Colors.white),
-    Icon(Icons.add, color:Colors.white),
+    Icon(Icons.map, size: 30, color: Colors.white),
+    Icon(Icons.layers, size: 30, color: Colors.white),
+    Icon(Icons.add, color: Colors.white),
     // Icon(Icons.notifications, size: 30,color:Colors.white),
-    Icon(Icons.person,color:Colors.white),
+    Icon(Icons.person, color: Colors.white),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-    backgroundColor: kPurple,
-        
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: kPurple,
+
         // ignore: prefer_const_literals_to_create_immutables
         items: [
           BottomNavigationBarItem(
@@ -54,12 +54,10 @@ class _HomeState extends State<Home> {
         onTap: (newIndex) {
           setState(() {
             controller.animateToPage(newIndex,
-                duration: Duration(microseconds: 300),
-                curve: Curves.ease);
+                duration: Duration(microseconds: 300), curve: Curves.ease);
           });
         },
       ),
-      
     );
   }
 }
