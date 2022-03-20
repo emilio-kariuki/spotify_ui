@@ -16,9 +16,9 @@ class _HomeState extends State<Home> {
   final items = [
     Icon(Icons.map, size: 30,color:Colors.white),
     Icon(Icons.layers, size: 30,color:Colors.white),
-    Icon(Icons.add, size: 30,color:Colors.white),
+    Icon(Icons.add, color:Colors.white),
     // Icon(Icons.notifications, size: 30,color:Colors.white),
-    Icon(Icons.person, size: 30,color:Colors.white),
+    Icon(Icons.person,color:Colors.white),
   ];
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
         onTap: (newIndex) {
           setState(() {
             controller.animateToPage(newIndex,
-                duration: Duration(microseconds: 500),
+                duration: Duration(microseconds: 300),
                 curve: Curves.ease);
           });
         },
