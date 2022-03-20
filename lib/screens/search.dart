@@ -12,6 +12,7 @@ class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: Center(child:Text("Hello"))
     );
   }

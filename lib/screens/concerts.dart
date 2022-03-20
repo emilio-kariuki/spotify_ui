@@ -12,6 +12,7 @@ class _ConcertState extends State<Concert> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: Center(child:Text("Hello"))
     );
   }

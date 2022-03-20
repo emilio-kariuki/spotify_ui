@@ -12,6 +12,7 @@ class _LibraryState extends State<Library> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: Center(child:Text("Hello"))
     );
   }

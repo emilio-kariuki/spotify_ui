@@ -12,7 +12,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // extendBody: true,
+       extendBody: true,
       backgroundColor: Colors.blue,
       body: SingleChildScrollView(child: Center(child:Text("Hello")))
     );

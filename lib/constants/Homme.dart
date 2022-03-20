@@ -23,7 +23,7 @@ class _HommeState extends State<Homme> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      extendBody: true,      body: Center(
         child: PageView(
           controller: controller,
           onPageChanged: (newIndex) {
